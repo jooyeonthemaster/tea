@@ -46,3 +46,5 @@ hwp_mcp.log
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel

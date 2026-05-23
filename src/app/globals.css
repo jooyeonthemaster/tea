@@ -1413,6 +1413,30 @@ button {
 
 /* ============ Responsive ============ */
 
+/* Tablets (iPad landscape) & short viewports: allow scrolling so the result page
+   doesn't get clipped when content is taller than 100vh. Scoped to result-shell
+   so the choice page keeps its 100vh flex layout (the mood images depend on it). */
+@media (min-width: 1024px) and ((hover: none) or (max-height: 900px)) {
+  body:has(.result-shell) {
+    overflow: auto;
+  }
+  .app-shell.result-shell {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: visible;
+  }
+  .result-shell .result-report {
+    height: auto;
+  }
+  .result-shell .result-grid {
+    height: auto;
+  }
+  .result-shell .combined-card {
+    height: auto;
+  }
+}
+
 @media (max-width: 1023px) {
   body {
     overflow: auto;
